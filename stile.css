@@ -1,0 +1,118 @@
+*, 
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+}
+
+div.background {
+    width: 100%;
+    height: 100vh;
+
+}
+.background video {
+    position: absolute;
+    z-index: -1000;
+    overflow: hidden;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    opacity: 60%;
+}
+
+header.wrapper {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+
+
+header h1 {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.bio-container {
+    position: absolute; /* Agar berada di atas video */
+    top: 50%; /* Posisi vertikal tengah */
+    left: 50%; /* Posisi horizontal tengah */
+    transform: translate(-50%, -50%); /* Mengatur posisi agar tepat di tengah */
+    background-color: rgba(0, 0, 0, 0.5); /* Warna putih transparan */
+    border-radius: 15px; /* Sudut melengkung */
+    padding: 20px; /* Padding di dalam */
+    text-align: center; /* Teks di tengah */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4); /* Bayangan lembut */
+    width: 80%; /* Lebar konten */
+    max-width: 600px; /* Lebar maksimum */
+}
+
+.profile-photo {
+    width: 100px; /* Ukuran awal */
+    height: auto; /* Menjaga aspek rasio */
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+.profile-photo:hover {
+    transform: scale(1.2); /* Membesar saat hover */
+}
+
+.bio-content {
+    color: #feffa7; /* Warna teks */
+}
+
+.mobil-kanan {
+    position: absolute; /* Posisi absolut untuk penempatan bebas */
+    bottom: 0px; /* Jarak dari bawah */
+    right: 0px; /* Jarak dari kanan */
+    width: 500px; /* Sesuaikan ukuran gambar */
+    height: auto; /* Menjaga aspek rasio */
+    z-index: 10; /* Pastikan gambar di atas elemen lainnya */
+}
+
+.kapal-kiri {
+    position: absolute; /* Agar bisa diposisikan secara bebas */
+    bottom: 10px; /* Jarak dari bagian bawah */
+    left: 0px; /* Jarak dari bagian kiri */
+    width: 500px; /* Atur lebar gambar */
+    height: auto; /* Menjaga aspek rasio */
+    z-index: 1; /* Pastikan gambar di atas elemen lain jika diperlukan */
+}
+
+/* Keyframe untuk animasi ngambang */
+@keyframes floating {
+    0% {
+        transform: translateY(0); /* Posisi awal */
+    }
+    50% {
+        transform: translateY(-20px); /* Bergerak ke atas 20px */
+    }
+    100% {
+        transform: translateY(0); /* Kembali ke posisi awal */
+    }
+}
+
+/* Terapkan animasi ke gambar mobil kanan dan kapal kiri */
+.mobil-kanan, .kapal-kiri {
+    animation: floating 3s ease-in-out infinite; /* Animasi ngambang */
+}
+
+/* Sesuaikan kecepatan animasi pada kedua gambar agar terlihat berbeda */
+.mobil-kanan {
+    animation-duration: 2.5s; /* Kecepatan animasi untuk mobil kanan */
+}
+
+.kapal-kiri {
+    animation-duration: 3.5s; /* Kecepatan animasi untuk kapal kiri */
+}

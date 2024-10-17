@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Ravan</title>
+    <link rel="icon" type="image/x-icon" href="carlogo.ico">
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+    <div class="background">
+        <video autoplay loop muted>
+            <source src="lifestyle1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <audio id="background-music" autoplay muted>
+        <source src="skyfall.ogg" type="audio/ogg">
+        <source src="skyfall.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script>
+        // Script untuk mengaktifkan suara setelah beberapa detik
+        setTimeout(function() {
+            var audio = document.getElementById('background-music');
+            audio.muted = false; // Membuka mute
+            audio.volume = 0.5; // Volume suara
+        }, 2000); // Suara akan dinyalakan 3 detik setelah halaman dimuat
+    </script>
+    
+
+    <img src="blobid0-removebg-preview.png" alt="Gambar Mobil" class="mobil-kanan">
+    <img src="mengenal-superyacht-kapal-pesiar-pribadi-para-sultan-yang-harganya-bisa-capai-rp116-miliar-hvp-removebg-preview.png" alt="Gambar Mobil" class="kapal-kiri">
+
+    <header class="wrapper">
+        <h1>Biodata Ravan</h1>
+    </header>
+    <div class="bio-container">
+        <img src="Screenshot 2024-09-27 195831.png" alt="Foto Profil" class="profile-photo">
+        <div class="bio-content">
+            <h2>Nama: Ravan Ahmad Syazani</h2>
+            <p>Kelas: XI TKJ 2</p>
+            <p>Umur: 16 tahun</p>
+            <p>Tanggal Lahir: 14 Juni 2008</p>
+            <p>Hobi: Bermain Video Game, Bersepedah</p>
+            <p>Cita - Cita: Pengusaha</p>
+            <p>Deskripsi: Orang Nya Ramah.</p>
+        </div>
+    </div>
+</body>
+</html>
